@@ -49,8 +49,8 @@
         max-height: 600px;
         padding: 20px;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        align-items: center;
+        gap: 40px;
         flex-shrink: 0;
         background: linear-gradient(135deg, #37833a 0%, #eac221 100%);
         border-radius: 20px;
@@ -60,16 +60,84 @@
         justify-content: center;
       }
 
+      .loan-types-align{
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+      }
+      
       .loan-form-container {
         background: transparent;
         border: 2px solid rgba(255, 255, 255, 0.3);
         border-radius: 20px;
         padding: 40px;
-        max-width: 500px;
+        max-width: 300px;
         width: 100%;
+        max-height: 300px;
+        height: 100%;
         position: relative;
         z-index: 2;
         margin: 0 auto;
+        align-items: center;
+      }
+
+      .loan-label{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .loan-form-secton-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+
+      }
+      .loan-type-title1 {
+        text-align: center;
+        font-family: Poppins;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: white;
+      }
+      
+      .loan-type-title2 {
+        text-align: center;
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: white;
+      }
+      
+      .loan-type-title3 {
+        text-align: center;
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        color: white;
+      }
+
+      .loan-type-desc{
+        text-align: center;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: normal;
+      }
+
+      .ideal-for-label{
+        font-weight: 600; 
+
       }
 
       .loan-form-container h2 {
@@ -594,21 +662,45 @@
 
     <div class="main-content">
       <div class="loan-application-section">
-        <div class="loan-form-container">
-          <h2>APPLY FOR A LOAN</h2>
-          <p>Get Support tailored for your needs!</p>
-          <form>
-            <div class="form-group">
-              <label>Full Name:</label>
-              <input type="text" required />
-            </div>
-            <div class="form-group">
-              <label>Email:</label>
-              <input type="email" required />
-            </div>
-            <button type="submit" class="submit-button">SUBMIT</button>
-          </form>
+        <div class="loan-form-secton-title">
+         <label class="loan-type-title1">APPLY FOR A LOAN</label>
+          <label class="loan-type-title2">Get Support tailored for your needs!</label>
         </div>
+
+        <div class="loan-types-align">
+        <div class="loan-form-container">
+          <div class="loan-label">
+            <img src="images\leaf.png">
+            <label class="loan-type-title3">Crop Production Loan</label>
+          </div>
+          <p class="loan-type-desc"> 
+            <span class="ideal-for-label"> Ideal For:</span>
+            Small-scale farmers preparing for planting season</p>
+        </div>
+
+        <div class="loan-form-container">
+          <div class="loan-label">
+            <img src="images\wrench.png">
+            <label class="loan-type-title3">Tool Rental Support Loan</label>
+          </div>
+          <p class="loan-type-desc"> 
+            <span class="ideal-for-label"> Ideal For:</span>
+            Farmers looking to boost efficiency during peak periods</p>
+        </div>
+
+        <div class="loan-form-container">
+          <div class="loan-label">
+            <img src="images\flower.png">
+            <label class="loan-type-title3">Agri-Business Expansiom Loan</label>
+          </div>
+          <p class="loan-type-desc"> 
+            <span class="ideal-for-label"> Ideal For:</span>
+            Growing agri-preneurs and small farm co-ops</p>
+        </div>
+        </div>
+        <div class="action-buttons">
+            <button class="action-button add-loan">APPLY NOW!</button>
+          </div>
       </div>
 
       <div class="loan-balance-section">
